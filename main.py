@@ -34,9 +34,11 @@ if __name__ == "__main__":
    # else:
    #     print("кредит недопустимий")
 
-    age = int(input("ваш вік"))
-    income = int(input("ваш річний дохід"))
     
+
+
+    
+
 
 
 
