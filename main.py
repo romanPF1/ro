@@ -1,7 +1,7 @@
 import json
 if __name__ == "__main__" :
     with open("products.json", "r", encoding="utf-8") as file:
-        products = json.load(file)
+      #   products = json.load(file)
       #  total_price = 0
       #  for item in products:
 
@@ -27,8 +27,8 @@ if __name__ == "__main__" :
 
       #  print(new_list_products)
 
-        some_arr = [1, 2, 2, 3]
-        unique_val = []
+      #  some_arr = [1, 2, 2, 3]
+      #  unique_val = []
 
       #  for el in some_arr:
        #     if el in unique_val:
@@ -37,7 +37,41 @@ if __name__ == "__main__" :
       #          unique_val.append(el)
 
       #  print(unique_val)
-        
+
+         products = json.load(file)
+         new_list_product = []
+
+        # for value in (item['value']):
+        #     for item in products:
+        #         print(value)
+        #     print(item['value'])
+        #     if value.lower() == "А ++":
+        #         print(item)
+
+         # for item in products:
+         #     # print(item['features'])
+          #     for el in item['features']:
+          #         if el['value'] == "А++":
+          #             print(el)
+        # for item in products:
+        #     for feature in item['features']:
+        #         if feature['value'] == "А++":
+        #             print(item["title"], feature)
 
 
+    print(products)
 
+    prices = []
+
+    for item in products:
+        product_price = int(item['price'].replace(" ", "").replace(" ", ""))
+        prices.append(product_price)
+
+    print(prices)
+
+    abs_prices = sorted(prices)
+    print(abs_prices)
+    desc_price = sorted(prices, reverse=True)
+    print(desc_price)
+    for i in range(5):
+        print(desc_price[i])
